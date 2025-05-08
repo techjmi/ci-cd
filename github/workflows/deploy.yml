@@ -1,3 +1,4 @@
+
 name: React CI/CD - Render
 
 on:
@@ -23,10 +24,6 @@ jobs:
 
       - name: Build the React app
         run: npm run build
-
-      # Optional: Run tests if you have any
-      # - name: Run tests
-      #   run: npm test
 
       - name: Deploy to Render
         run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
